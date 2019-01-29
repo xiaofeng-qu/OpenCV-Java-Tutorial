@@ -1,0 +1,17 @@
+import org.opencv.core.Core;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+
+public class OpenImage {
+
+	public static void main(String[] args) {
+		// Load OpenCV core library
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        // Initial the image class
+        Imgcodecs imageCodec = new Imgcodecs();
+        String file = "rainbow.jpeg";
+        System.out.println("mat = " + mat.dump());
+	}
+
+}

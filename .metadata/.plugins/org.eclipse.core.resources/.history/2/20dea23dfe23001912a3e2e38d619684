@@ -1,0 +1,25 @@
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+
+public class OpenImage {
+
+	public static void main(String[] args) {
+		// Load OpenCV core library
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        // Initial the image class
+        Imgcodecs imageCodecs = new Imgcodecs();
+        // Path to the image
+        String file = "rainbow.jpeg";
+        // 
+        Mat matrix = imageCodecs.imread(file);
+        if(matrix.empty()) {
+        	System.out.println("No image loaded");
+        } else {
+        	System.out.println("Image loaded");
+        	imageCodecs.imwrite("rainbow2.jpeg", matrix);
+        	System.out.println("Image Saved ...");
+        }
+	}
+
+}
